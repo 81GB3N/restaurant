@@ -1,1 +1,1 @@
-(()=>{"use strict"})();
+(()=>{document.addEventListener("click",(e=>{n[`${document.elementFromPoint(e.clientX,e.clientY).dataset.nav}`]()}));const n={menu:function(){console.log("menu")}}})();
