@@ -1,1 +1,1 @@
-(()=>{"use strict";document.addEventListener("click",(e=>{console.log(window.menu),"function"==typeof window[document.elementFromPoint(e.clientX,e.clientY).dataset.nav]&&window[document.elementFromPoint(e.clientX,e.clientY).dataset.nav]()}))})();
+(()=>{"use strict"})();
