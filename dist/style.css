@@ -16,9 +16,9 @@ body, html{
 #content{
     display: grid;
     grid-template-columns: 70% 30%;
-    grid-template-rows: 10% 8% auto 5%;
+    grid-template-rows: 10% 8% auto 4%;
     height: 100vh;
-    overflow: scroll;
+    overflow-y: scroll;
     /* opacity: 0; */
     /* grid-template-areas: ; */
 }
@@ -50,7 +50,7 @@ header{
     z-index: 2;
 }
 
-ul{
+.nav-list{
     display: flex;
     width: min-content;
     padding: 8px;
@@ -63,7 +63,7 @@ ul{
     /* transition: background-color 1s; */
 }
 
-ul:hover{
+.nav-list:hover{
     transition: 1s;
     transform: scale(1.1);
     background-color: aquamarine;
@@ -92,7 +92,7 @@ nav{
 
 main{
     grid-column: 1/2;
-    margin-left: 10%;
+    /* margin-left: 10%; */
     border-right: var(--border);
 }
 
@@ -103,11 +103,7 @@ main{
 }*/
 
 .image{
-    width: 115%;
-    /* height: 100; */
-    object-fit:cover;
-    position: relative;
-    right: 15%;
+    width: 100%;
     z-index: 0;
 }
 
@@ -145,4 +141,46 @@ section>p{
 
 .selected{
     background-color: #76a864;
+}
+
+footer>p{
+    display: grid;
+    align-self: center;
+    margin: 0;
+}
+/* 
+.contact-details{
+    display: flex;
+    justify-content: center;
+} */
+
+.contact-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(119, 163, 67);
+
+    /* margin-right: 50%;
+    margin-left: 5%;
+    border-radius: 5%; */
+
+}
+
+.description{
+    margin: auto 10%;
+}
+
+h2{
+    text-align: center;
+}
+
+.contact-list>ul{
+    height: 100%;
+    width: 95%;
+    margin: 0;
+    padding: 2% 0 2% 5%;
+}
+
+.contact-list>ul:hover{
+    background-color: #A7D397;
 }

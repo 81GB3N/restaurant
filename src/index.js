@@ -1,25 +1,34 @@
-// import { menu } from './display.js';
-import _ from 'lodash';
-import menu from './display.js';
+import {menu, about, contact} from "./display.js"
 
-// menu();
-
-// const functionContainer = {
+const functionContainer = {
 //     menu: function(){
-//         const element = document.createElement('div');
-//   const btn = document.createElement('button');
+//     console.log("menu");
+//   },
+//     about: function(){
+//     console.log("about");
+//   },
+//     contact: function(){
+//     console.log("contact");
+//   },
+    menu,
+    about,
+    contact,
+}
 
-//    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+const info = {
+    main: document.querySelector("main"),
+    selected: document.querySelector(".about"),
+}
 
-//   btn.innerHTML = "press me";
-//   btn.onclick = printMe;
-// //   btn.onclick = menu();
-//   element.appendChild(btn);
+document.addEventListener('click', e => { 
+    let accesibleElement = document.elementFromPoint(e.clientX, e.clientY);
+    if(accesibleElement.dataset.nav && !accesibleElement.classList.value.includes("selected")){
+        info.selected.classList.remove("selected");
+        info.main.innerHTML = ``;
+        accesibleElement.classList.add("selected");
+        info.selected = accesibleElement;
+        functionContainer[`${accesibleElement.dataset.nav}`]();
+    }
+});    
 
-//    return element;
-//     }
-//   };
-
-  
-//   document.body.appendChild(functionContainer['menu']());
-  
+export {info};
